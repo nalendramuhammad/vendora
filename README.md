@@ -540,6 +540,4 @@ extension/
 - 👥 User Groups
 - 🛠️ Developer Tools
 
-## 📄 License
 
-OpenCart is released under the GNU General Public License v3.0
