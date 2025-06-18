@@ -410,6 +410,37 @@ $cart->remove($cart_id);
 
 ## 🏗️ System Architecture
 
+### MVC + Language Flow Diagram
+
+```mermaid
+flowchart TD
+    User([User])
+    Controller([Controller])
+    View([View])
+    Model([Model])
+    Language([Language])
+
+    User -- "sends request" --> Controller
+    Controller -- "updates" --> Model
+    Model -- "data" --> Controller
+    Controller -- "renders" --> View
+    View -- "displays to" --> User
+    Controller -- "loads" --> Language
+    Language -- "provides text" --> Controller
+
+    %% Styling
+    classDef user fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef controller fill:#faa,stroke:#c00,stroke-width:2px;
+    classDef view fill:#afa,stroke:#080,stroke-width:2px;
+    classDef model fill:#aaf,stroke:#08c,stroke-width:2px;
+    classDef language fill:#ffc,stroke:#fa0,stroke-width:2px;
+    class User user;
+    class Controller controller;
+    class View view;
+    class Model model;
+    class Language language;
+```
+
 ### MVC Pattern
 
 ```plaintext
@@ -512,17 +543,3 @@ extension/
 ## 📄 License
 
 OpenCart is released under the GNU General Public License v3.0
-
-```plaintext
-Copyright (c) 2024 OpenCart
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-```
-
----
-
-<div align="center">
-  <sub>Built with ❤️ by the OpenCart Community</sub>
-</div>
