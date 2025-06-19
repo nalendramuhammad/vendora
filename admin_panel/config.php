@@ -3,17 +3,17 @@
 define('APPLICATION', 'Admin');
 
 // HTTP
-define('HTTP_SERVER', 'http://localhost/opencart/admin_panel/');
-define('HTTP_CATALOG', 'http://localhost/opencart/');
+define('HTTP_SERVER', 'https://vendora-staging-5ff3.up.railway.app/admin_panel/');
+define('HTTP_CATALOG', 'https://vendora-staging-5ff3.up.railway.app/');
 
 // DIR
-define('DIR_OPENCART', '/Applications/XAMPP/xamppfiles/htdocs/opencart/');
+define('DIR_OPENCART', dirname(__DIR__) . '/');
 define('DIR_APPLICATION', DIR_OPENCART . 'admin_panel/');
 define('DIR_EXTENSION', DIR_OPENCART . 'extension/');
 define('DIR_IMAGE', DIR_OPENCART . 'image/');
 define('DIR_SYSTEM', DIR_OPENCART . 'system/');
 define('DIR_CATALOG', DIR_OPENCART . 'catalog/');
-define('DIR_STORAGE', '/Applications/XAMPP/xamppfiles/htdocs/storage_opencart/');
+define('DIR_STORAGE', DIR_OPENCART . 'storage/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
@@ -25,11 +25,11 @@ define('DIR_UPLOAD', DIR_STORAGE . 'upload/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_DATABASE', 'opencart_db');
-define('DB_PORT', '3306');
+define('DB_HOSTNAME', getenv('MYSQLHOST') ?: 'localhost');
+define('DB_USERNAME', getenv('MYSQLUSER') ?: 'root');
+define('DB_PASSWORD', getenv('MYSQLPASSWORD') ?: '');
+define('DB_DATABASE', getenv('MYSQLDATABASE') ?: 'opencart_db');
+define('DB_PORT', getenv('MYSQLPORT') ?: '3306');
 define('DB_PREFIX', 'oc_');
 
 define('DB_SSL_KEY', '');
