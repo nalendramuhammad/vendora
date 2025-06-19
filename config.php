@@ -3,7 +3,7 @@
 define('APPLICATION', 'Catalog');
 
 // HTTP
-define('HTTP_SERVER', 'vendora-staging-5ff3.up.railway.app');
+define('HTTP_SERVER', 'vendora-production-38cf.up.railway.app');
 
 // DIR
 define('DIR_OPENCART', dirname(__DIR__) . '/');
