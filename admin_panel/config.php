@@ -3,8 +3,8 @@
 define('APPLICATION', 'Admin');
 
 // HTTP
-define('HTTP_SERVER', 'https://vendora-staging-5ff3.up.railway.app/admin_panel/');
-define('HTTP_CATALOG', 'https://vendora-staging-5ff3.up.railway.app/');
+define('HTTP_SERVER', 'https://vendora-production-38cf.up.railway.app/admin_panel/');
+define('HTTP_CATALOG', 'https://vendora-production-38cf.up.railway.app/');
 
 // DIR
 define('DIR_OPENCART', dirname(__DIR__) . '/');
